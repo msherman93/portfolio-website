@@ -1,0 +1,17 @@
+.wrapper {
+  padding: 8px;
+}
+
+.projectWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+}
+
+.projectImage {
+  border-radius: 25px;
+  height: auto;
+  width: 60%;
+}

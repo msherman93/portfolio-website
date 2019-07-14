@@ -1,0 +1,18 @@
+.wrapper {
+    margin-bottom: 3%;
+    background-color: #049CD8;
+    opacity: 0.9;
+}
+
+.logo {
+    height: auto;
+    width: 20%;
+}
+
+.textWrapper {
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+}
+
