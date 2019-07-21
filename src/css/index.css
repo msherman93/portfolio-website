@@ -1,13 +1,13 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #43B047;
+    margin: 0;
+    padding: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 p {
-  color: #E52521;
+    text-decoration: none;
+    color: white;
 }

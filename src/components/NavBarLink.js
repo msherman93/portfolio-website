@@ -1,26 +1,22 @@
 import React, {Component} from 'react';
-import Nav from 'react-bootstrap/Nav';
+import {NavLink} from 'react-router-dom';
 
 import styles from '../css/components/NavBarLink.module.css';
 
 export default class NavBarLink extends Component {
     render() {
-        const {text, id} = this.props;
+        const {text, path} = this.props;
 
         return (
-            <Nav.Link
-                href={'#'}
-                onClick={() => document.getElementById(id).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                })}
+            <NavLink
+                className={styles.navLinkWrapper}
+                style={{textDecoration: 'none'}}
+                to={path}
             >
-                <div className={styles.navLinkWrapper}>
-                    <p className={styles.navLink}>
-                        {text}
-                    </p>
-                </div>
-            </Nav.Link>
+                <p className={styles.navLink}>
+                    {text}
+                </p>
+            </NavLink>
         );
     }
 }

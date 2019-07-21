@@ -21,18 +21,23 @@ export default class NavBar extends Component {
                 <Navbar.Collapse>
                     <Nav className={styles.textWrapper}>
                         <NavBarLink
+                            path={'/'}
                             text={'Home'}
                         />
                         <NavBarLink
+                            path={'/portfolio'}
                             text={'Portfolio'}
                         />
                         <NavBarLink
+                            path={'/dominic'}
                             text={'Dominic'}
                         />
                         <NavBarLink
+                            path={'/michael'}
                             text={'Michael'}
                         />
                         <NavBarLink
+                            path={'/contact-us'}
                             text={'Contact Us'}
                         />
                     </Nav>
