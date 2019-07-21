@@ -24,16 +24,9 @@ class App extends Component {
 
     render() {
         return (
-            <div
-                className={styles.wrapper}
-                style={{
-                    height: window.innerHeight,
-                    paddingTop: '10%',
-                    width: window.innerWidth
-                }}
-            >
+            <div className={styles.wrapper}>
                 <NavBar />
-                <div style={{paddingTop: 100}}>
+                <div style={{paddingTop: '5%'}}>
                     <Routing />
                 </div>
             </div>

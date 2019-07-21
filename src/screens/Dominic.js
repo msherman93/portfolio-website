@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class Dominic extends Component {
     render() {
         return (
-            <div>
+            <div style={{height: window.innerHeight}}>
                 {'DOMINIC'}
             </div>
         );
