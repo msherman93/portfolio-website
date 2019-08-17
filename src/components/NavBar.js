@@ -17,13 +17,17 @@ export default class NavBar extends Component {
                 id={'navbar'}
                 variant={'dark'}
             >
+                <Navbar.Brand
+                    as={'p'}
+                >
+                    <NavBarLink
+                        path={'/'}
+                        text={'Sherman Brothers'}
+                    />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse>
                     <Nav className={styles.textWrapper}>
-                        <NavBarLink
-                            path={'/'}
-                            text={'Home'}
-                        />
                         <NavBarLink
                             path={'/portfolio'}
                             text={'Portfolio'}

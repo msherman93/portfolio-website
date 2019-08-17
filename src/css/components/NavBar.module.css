@@ -1,6 +1,8 @@
 .wrapper {
     margin-bottom: 3%;
-    opacity: 0.9;
+    background-color: #2699FB;
+    border: 1px solid #F0F0F0;
+    opacity: 1;
 }
 
 .logo {

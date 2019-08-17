@@ -13,6 +13,10 @@ class App extends Component {
         };
     }
 
+    componentDidMount() {
+        this._setNavBarHeight();
+    }
+
     componentDidUpdate() {
         if (this.state.navBarHeight !== document.getElementById('navbar').scrollHeight) {
             this._setNavBarHeight();
@@ -26,7 +30,7 @@ class App extends Component {
         return (
             <div className={styles.wrapper}>
                 <NavBar />
-                <div style={{paddingTop: '5%'}}>
+                <div style={{paddingTop: this.state.navBarHeight + window.innerHeight * 0.02}}>
                     <Routing />
                 </div>
             </div>

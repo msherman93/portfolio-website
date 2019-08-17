@@ -1,6 +1,5 @@
 .wrapper {
     align-items: center;
-    background: url("../assets/Background.jpg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: row;
