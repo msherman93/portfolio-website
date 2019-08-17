@@ -1,0 +1,1 @@
+export const aboutUsText = 'We are three brothers with a passion for making cool web and mobile applications. INSERT MORE INFO HERE';

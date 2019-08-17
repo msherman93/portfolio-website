@@ -2,7 +2,16 @@ import React, {Component} from 'react';
 
 import NavBar from './components/NavBar';
 import Routing from './Routing';
-import styles from './css/App.module.css';
+
+const styles = {
+    wrapper: {
+        alignItems: 'center',
+        backgroundSize: 'cover',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center'
+    }
+};
 
 class App extends Component {
     constructor(props) {
@@ -28,7 +37,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className={styles.wrapper}>
+            <div style={styles.wrapper}>
                 <NavBar />
                 <div style={{paddingTop: this.state.navBarHeight + window.innerHeight * 0.02}}>
                     <Routing />

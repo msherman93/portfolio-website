@@ -1,37 +1,44 @@
 import React, {Component} from 'react';
 import Container from 'react-bootstrap/Container';
 
-import sharedStyles from '../css/SharedStyles.module.css';
-import textStyles from '../css/TextStyles.module.css';
-import styles from '../css/screens/Home.module.css';
 import homePicture from '../assets/HomePicture.jpg';
+import {boxWrapper, centeredColumn} from '../styles/shared-styles';
+import {textStyles} from '../styles/text-styles';
+import {aboutUsText} from '../constants/text';
+
+const styles = {
+    bodyText: {
+        ...textStyles.blueBodyText,
+        paddingBottom: 40
+    },
+    headerText: {
+        paddingBottom: 25,
+        textAlign: 'center'
+    },
+    image: {
+        boxShadow: '0 0 8px darkGrey',
+        height: 'auto',
+        width: '75%'
+    }
+};
 
 export default class Home extends Component {
     render() {
         return (
-            <Container fluid>
-                <div
-                    className={sharedStyles.wrapper}
-                >
-                    <h2
-                        style={{
-                            paddingBottom: 25,
-                            textAlign: 'center'
-                        }}
-                    >{'Sherman Brothers Web & Mobile Development'}
-                    </h2>
-                    <p
-                        className={textStyles.blueBodyText}
-                        style={{paddingBottom: 25}}
-                    >
-                        {'“Your business is unique, your website should be too."'}
-                    </p>
-                    <img
-                        alt={''}
-                        className={styles.picture}
-                        src={homePicture}
-                    />
+            <Container
+                fluid
+                style={centeredColumn}
+            >
+                <div style={boxWrapper}>
+                    <h2 style={styles.headerText}>{'Sherman Brothers Web & Mobile Development'}</h2>
+                    <p style={styles.bodyText}>{'“Your business is unique, your website should be too."'}</p>
+                    <p style={styles.bodyText}>{aboutUsText}</p>
                 </div>
+                <img
+                    alt={''}
+                    src={homePicture}
+                    style={styles.image}
+                />
             </Container>
         );
     }

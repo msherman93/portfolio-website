@@ -2,15 +2,35 @@ import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-import styles from '../css/components/NavBar.module.css';
+import {blue, lightGrey, white} from '../styles/colors';
 
 import NavBarLink from './NavBarLink';
+
+const styles = {
+    logo: {
+        height: 'auto',
+        width: '20%'
+    },
+    textWrapper: {
+        color: white,
+        justifyContent: 'space-evenly',
+        opacity: 1,
+        position: 'relative',
+        width: '100%'
+    },
+    wrapper: {
+        backgroundColor: blue,
+        borderColor: lightGrey,
+        borderWidth: 1,
+        opacity: 1
+    }
+};
 
 export default class NavBar extends Component {
     render() {
         return (
             <Navbar
-                className={styles.wrapper}
+                style={styles.wrapper}
                 collapseOnSelect
                 expand={'xl'}
                 fixed={'top'}
@@ -25,9 +45,9 @@ export default class NavBar extends Component {
                         text={'Sherman Brothers'}
                     />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse>
-                    <Nav className={styles.textWrapper}>
+                    <Nav style={styles.textWrapper}>
                         <NavBarLink
                             path={'/portfolio'}
                             text={'Portfolio'}
