@@ -1,28 +1,14 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable react/no-array-index-key */
 import React, {Component} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import {projects} from '../constants/projects';
+import Project from '../components/Project';
 
 const styles = {
-    projectImage: {
-        borderRadius: 25,
-        height: 'auto',
-        width: '60%'
-    },
-    projectWrapper: {
-        alignItems: 'center',
-        backgroundColor: 'white',
-        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        margin: 4,
-        padding: 8
-    },
     wrapper: {
-        padding: 8,
         width: '100%'
     }
 };
@@ -36,24 +22,12 @@ export default class Portfolio extends Component {
             >
                 <Row>
                     {
-                        projects.map((project) => (
-                            <Col
-                                key={project.name}
-                                style={styles.projectWrapper}
-                            >
-                                <img
-                                    alt={''}
-                                    src={project.thumbnail}
-                                    style={styles.projectImage}
-                                />
-                                <p>
-                                    {project.name}
-                                </p>
-                                <p>
-                                    {project.subText}
-                                </p>
-                            </Col>
-                        ))
+                        projects.map((project, index) =>
+                            <Project
+                                key={index}
+                                project={project}
+                            />
+                        )
                     }
                 </Row>
             </Container>

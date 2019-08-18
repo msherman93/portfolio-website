@@ -3,15 +3,7 @@ import React, {Component} from 'react';
 import NavBar from './components/NavBar';
 import Routing from './Routing';
 import Footer from './components/Footer';
-
-const styles = {
-    wrapper: {
-        alignItems: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-    }
-};
+import {centeredColumn} from './styles/shared-styles';
 
 export default class App extends Component {
     constructor(props) {
@@ -37,7 +29,10 @@ export default class App extends Component {
 
     render() {
         return (
-            <div style={styles.wrapper}>
+            <div
+                id={'wrapper'}
+                style={centeredColumn}
+            >
                 <NavBar />
                 <div style={{paddingTop: this.state.navBarHeight + window.innerHeight * 0.02}}>
                     <Routing />

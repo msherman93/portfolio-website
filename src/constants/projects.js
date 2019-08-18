@@ -1,47 +1,19 @@
 export const projects = [
     {
+        link: 'https://dominicandmarywedding.com',
         name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
         thumbnail: require('../assets/WeddingWebsite.png')
     },
     {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
+        link: 'moss-rock-landscaping.firebaseapp.com',
+        name: 'Moss Rock Landscaping',
+        thumbnail: require('../assets/MossRock.png')
     },
     {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
-    },
-    {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
-    },
-    {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
-    },
-    {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
-    },
-    {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
-    },
-    {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
-    },
-    {
-        name: 'Wedding Website',
-        subText: 'BOOM BOoM POWWpWOWOWOWOOWOWOWowowwowooW yumm yummm',
-        thumbnail: require('../assets/WeddingWebsite.png')
+        appStoreLink: '',
+        name: 'Spades Scorekeeper',
+        playStoreLink: '',
+        square: true,
+        thumbnail: require('../assets/Spades.png')
     }
 ];
