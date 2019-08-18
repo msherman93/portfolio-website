@@ -5,6 +5,10 @@ export const textStyles = {
         color: blue,
         fontSize: 22
     },
+    blueSubText: {
+        color: blue,
+        fontSize: 16
+    },
     navBarText: {
         color: white,
         fontSize: 16,

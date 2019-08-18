@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Col from 'react-bootstrap/Col';
 
+import {textStyles} from '../styles/text-styles';
+
 const styles = {
     projectImage: {
         borderRadius: 25,
@@ -16,6 +18,10 @@ const styles = {
         justifyContent: 'center',
         margin: 4,
         padding: 8
+    },
+    subText: {
+        ...textStyles.blueSubText,
+        paddingTop: '5%'
     }
 };
 
@@ -38,19 +44,10 @@ export default class Project extends Component {
                         width: this._getImageWidth()
                     }}
                 />
-                {
-                    project.link ?
-                        <a
-                            href={project.link}
-                            target={'_blank'}
-                        >
-                            {project.name}
-                        </a>
-                        :
-                        <div>
-                            <p>{project.name}</p>
-                        </div>
-                }
+                <div>
+                    <p style={textStyles.blueBodyText}>{project.name}</p>
+                </div>
+                <p style={styles.subText}>{project.subText}</p>
             </Col>
         );
     }
