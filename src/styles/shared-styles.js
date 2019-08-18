@@ -1,10 +1,18 @@
 import {darkGrey, white} from './colors';
 
-export const centeredColumn = {
+const centered = {
     alignItems: 'center',
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center'
+};
+
+export const centeredRow = {
+    ...centered,
+    flexDirection: 'row'
+};
+export const centeredColumn = {
+    ...centered,
+    flexDirection: 'column'
 };
 
 export const boxWrapper = {
@@ -14,7 +22,7 @@ export const boxWrapper = {
     borderWidth: 1,
     justifyContent: 'center',
     margin: '2%',
-    maxWidth: 1200,
+    maxWidth: 1100,
     padding: '5%',
     width: '93%'
 };

@@ -22,7 +22,8 @@ const styles = {
         padding: 8
     },
     wrapper: {
-        padding: 8
+        padding: 8,
+        width: '100%'
     }
 };
 

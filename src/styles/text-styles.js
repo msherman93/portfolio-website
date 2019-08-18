@@ -3,15 +3,15 @@ import {blue, white} from './colors';
 export const textStyles = {
     blueBodyText: {
         color: blue,
-        size: 24
+        fontSize: 22
     },
     navBarText: {
         color: white,
-        opacity: 0.7,
-        size: 16
+        fontSize: 16,
+        opacity: 0.7
     },
     selectedNavBarText: {
         color: white,
-        size: 16
+        fontSize: 16
     }
 };

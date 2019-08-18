@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import homePicture from '../assets/HomePicture.jpg';
 import {boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import {aboutUsText} from '../constants/text';
+import {loremIpsum} from '../constants/text';
 
 const styles = {
     bodyText: {
@@ -32,7 +32,7 @@ export default class Home extends Component {
                 <div style={boxWrapper}>
                     <h2 style={styles.headerText}>{'Sherman Brothers Web & Mobile Development'}</h2>
                     <p style={styles.bodyText}>{'“Your business is unique, your website should be too."'}</p>
-                    <p style={styles.bodyText}>{aboutUsText}</p>
+                    <p style={styles.bodyText}>{loremIpsum}</p>
                 </div>
                 <img
                     alt={''}

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 
 import {blue, lightGrey, white} from '../styles/colors';
 
@@ -13,16 +12,19 @@ const styles = {
     },
     textWrapper: {
         color: white,
-        justifyContent: 'space-evenly',
+        justifyContent: 'flex-end',
         opacity: 1,
-        position: 'relative',
-        width: '100%'
+        width: '20%'
     },
     wrapper: {
         backgroundColor: blue,
         borderColor: lightGrey,
         borderWidth: 1,
-        opacity: 1
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        opacity: 1,
+        paddingLeft: '7%',
+        paddingRight: '7%'
     }
 };
 
@@ -30,41 +32,40 @@ export default class NavBar extends Component {
     render() {
         return (
             <Navbar
-                style={styles.wrapper}
                 collapseOnSelect
-                expand={'xl'}
+                expand={'md'}
                 fixed={'top'}
                 id={'navbar'}
+                style={styles.wrapper}
                 variant={'dark'}
             >
                 <Navbar.Brand
                     as={'p'}
                 >
+                    <p>{'Logo'}</p>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse style={styles.textWrapper}>
                     <NavBarLink
                         path={'/'}
-                        text={'Sherman Brothers'}
+                        text={'Home'}
                     />
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse>
-                    <Nav style={styles.textWrapper}>
-                        <NavBarLink
-                            path={'/portfolio'}
-                            text={'Portfolio'}
-                        />
-                        <NavBarLink
-                            path={'/dominic'}
-                            text={'Dominic'}
-                        />
-                        <NavBarLink
-                            path={'/michael'}
-                            text={'Michael'}
-                        />
-                        <NavBarLink
-                            path={'/contact-us'}
-                            text={'Contact Us'}
-                        />
-                    </Nav>
+                    <NavBarLink
+                        path={'/portfolio'}
+                        text={'Portfolio'}
+                    />
+                    <NavBarLink
+                        path={'/dominic'}
+                        text={'Dominic'}
+                    />
+                    <NavBarLink
+                        path={'/michael'}
+                        text={'Michael'}
+                    />
+                    <NavBarLink
+                        path={'/contact-us'}
+                        text={'Contact Us'}
+                    />
                 </Navbar.Collapse>
             </Navbar>
         );

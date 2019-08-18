@@ -15,7 +15,7 @@ export default class NavBarLink extends Component {
 
         return (
             <NavLink
-                className={path !== '/' ? styles.navLinkWrapper : ''}
+                className={styles.navLinkWrapper}
                 style={{textDecoration: 'none'}}
                 to={path}
             >

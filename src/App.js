@@ -2,18 +2,18 @@ import React, {Component} from 'react';
 
 import NavBar from './components/NavBar';
 import Routing from './Routing';
+import Footer from './components/Footer';
 
 const styles = {
     wrapper: {
         alignItems: 'center',
-        backgroundSize: 'cover',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'center'
     }
 };
 
-class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
 
@@ -42,9 +42,8 @@ class App extends Component {
                 <div style={{paddingTop: this.state.navBarHeight + window.innerHeight * 0.02}}>
                     <Routing />
                 </div>
+                <Footer />
             </div>
         );
     }
 }
-
-export default App;
