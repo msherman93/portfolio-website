@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {blue, lightGrey, white} from '../styles/colors';
 
 import NavBarLink from './NavBarLink';
+import {CONTACT_US, DOMINIC, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
 
 const styles = {
     logo: {
@@ -47,23 +48,23 @@ export default class NavBar extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse style={styles.textWrapper}>
                     <NavBarLink
-                        path={'/'}
+                        path={HOME}
                         text={'Home'}
                     />
                     <NavBarLink
-                        path={'/portfolio'}
+                        path={PORTFOLIO}
                         text={'Portfolio'}
                     />
                     <NavBarLink
-                        path={'/dominic'}
+                        path={DOMINIC}
                         text={'Dominic'}
                     />
                     <NavBarLink
-                        path={'/michael'}
+                        path={MICHAEL}
                         text={'Michael'}
                     />
                     <NavBarLink
-                        path={'/contact-us'}
+                        path={CONTACT_US}
                         text={'Contact Us'}
                     />
                 </Navbar.Collapse>

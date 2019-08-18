@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Container from 'react-bootstrap/Container';
 
 import homePicture from '../assets/HomePicture.jpg';
-import {boxWrapper, centeredColumn} from '../styles/shared-styles';
+import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
 import {loremIpsum} from '../constants/text';
 
@@ -16,7 +16,7 @@ const styles = {
         textAlign: 'center'
     },
     image: {
-        boxShadow: '0 0 8px darkGrey',
+        boxShadow,
         height: 'auto',
         width: '75%'
     }

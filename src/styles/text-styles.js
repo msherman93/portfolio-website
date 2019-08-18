@@ -3,11 +3,11 @@ import {blue, white} from './colors';
 export const textStyles = {
     blueBodyText: {
         color: blue,
-        fontSize: 22
-    },
-    blueSubText: {
-        color: blue,
         fontSize: 16
+    },
+    blueHeaderText: {
+        color: blue,
+        fontSize: 22
     },
     navBarText: {
         color: white,

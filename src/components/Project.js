@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Col from 'react-bootstrap/Col';
 
 import {textStyles} from '../styles/text-styles';
+import {boxWrapper} from '../styles/shared-styles';
 
 const styles = {
     projectImage: {
@@ -9,24 +10,14 @@ const styles = {
         height: 'auto',
         marginBottom: '10%'
     },
-    projectWrapper: {
-        alignItems: 'center',
-        backgroundColor: 'white',
-        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        margin: 4,
-        padding: 8
-    },
     subText: {
-        ...textStyles.blueSubText,
+        ...textStyles.blueBodyText,
         paddingTop: '5%'
     }
 };
 
 export default class Project extends Component {
-    _getImageWidth = () => this.props.project.square ? '45%' : '80%';
+    _getImageWidth = () => this.props.project.square ? '50%' : '80%';
 
     render() {
         const {project} = this.props;
@@ -34,7 +25,7 @@ export default class Project extends Component {
         return (
             <Col
                 key={project.name}
-                style={styles.projectWrapper}
+                style={boxWrapper}
             >
                 <img
                     alt={''}
@@ -45,7 +36,7 @@ export default class Project extends Component {
                     }}
                 />
                 <div>
-                    <p style={textStyles.blueBodyText}>{project.name}</p>
+                    <p style={textStyles.blueHeaderText}>{project.name}</p>
                 </div>
                 <p style={styles.subText}>{project.subText}</p>
             </Col>
