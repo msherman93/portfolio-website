@@ -1,10 +1,28 @@
 import React, {Component} from 'react';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 import {textStyles} from '../styles/text-styles';
-import {boxWrapper} from '../styles/shared-styles';
+import {boxWrapper, centeredRow} from '../styles/shared-styles';
+import github from '../assets/github.svg';
+import link from '../assets/link.png';
+import appstore from '../assets/appstore.png';
+import playstore from '../assets/playstore.png';
 
 const styles = {
+    icon: {
+        width: '60%'
+    },
+    iconLink: {
+        ...centeredRow,
+        width: '30%'
+    },
+    iconWrapper: {
+        ...centeredRow,
+        justifyContent: 'space-evenly',
+        paddingTop: '7%',
+        width: '70%'
+    },
     projectImage: {
         borderRadius: 25,
         height: 'auto',
@@ -13,6 +31,10 @@ const styles = {
     subText: {
         ...textStyles.blueBodyText,
         paddingTop: '5%'
+    },
+    wrapper: {
+        ...boxWrapper,
+        padding: '2%'
     }
 };
 
@@ -25,7 +47,7 @@ export default class Project extends Component {
         return (
             <Col
                 key={project.name}
-                style={boxWrapper}
+                style={styles.wrapper}
             >
                 <img
                     alt={''}
@@ -39,6 +61,60 @@ export default class Project extends Component {
                     <p style={textStyles.blueHeaderText}>{project.name}</p>
                 </div>
                 <p style={styles.subText}>{project.subText}</p>
+                <Row style={styles.iconWrapper}>
+                    <a
+                        href={project.github}
+                        style={styles.iconLink}
+                        target={'_blank'}
+                    >
+                        <img
+                            src={github}
+                            style={styles.icon}
+                        />
+                    </a>
+                    {
+                        project.link ?
+                            <a
+                                href={project.link}
+                                style={styles.iconLink}
+                                target={'_blank'}
+                            >
+                                <img
+                                    src={link}
+                                    style={styles.icon}
+                                />
+                            </a>
+                            : null
+                    }
+                    {
+                        project.appStoreLink ?
+                            <a
+                                href={project.appStoreLink}
+                                style={styles.iconLink}
+                                target={'_blank'}
+                            >
+                                <img
+                                    src={appstore}
+                                    style={styles.icon}
+                                />
+                            </a>
+                            : null
+                    }
+                    {
+                        project.playStoreLink ?
+                            <a
+                                href={project.playStoreLink}
+                                style={styles.iconLink}
+                                target={'_blank'}
+                            >
+                                <img
+                                    src={playstore}
+                                    style={styles.icon}
+                                />
+                            </a>
+                            : null
+                    }
+                </Row>
             </Col>
         );
     }
