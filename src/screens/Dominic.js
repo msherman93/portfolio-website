@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import {Document, Page} from 'react-pdf';
 
 import {boxShadow, boxWrapper} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
 import dominic from '../assets/Dominic.jpg';
-import resume from '../assets/ShermanResume.pdf';
 
 const styles = {
     image: {
@@ -17,17 +15,16 @@ const styles = {
 };
 
 export default class Dominic extends Component {
-    state = {
-        loading: true
-    };
-
     render() {
-        if (this.state.loading) {
-            return null;
-        }
+        console.log('rendered');
 
         return (
-            <div style={{height: window.innerHeight}}>
+            <div
+                style={{
+                    height: window.innerHeight,
+                    paddingBottom: window.innerHeight * 0.6
+                }}
+            >
                 <div style={boxWrapper}>
                     <h2>{'Dominic'}</h2>
                     <p style={textStyles.blueBodyText}>{'Full-stack software developer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
@@ -37,16 +34,18 @@ export default class Dominic extends Component {
                         style={styles.image}
                     />
                 </div>
-                <div style={boxWrapper}>
-                    <Document
-                        file={resume}
-                        onLoadSuccess={() => {
-                            console.log('here');
-                            this.setState({loading: false});
-                        }}
-                    >
-                        <Page pageNumber={1} />
-                    </Document>
+                <div
+                    onLoad={() => {
+                        console.log('here');
+                    }}
+                    style={boxWrapper}
+                >
+                    <embed
+                        allowFullScreen
+                        height={window.innerHeight * 0.6}
+                        src={'/ShermanResume.pdf'}
+                        width={window.innerWidth * 0.5}
+                    />
                 </div>
             </div>
         );

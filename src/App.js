@@ -37,7 +37,6 @@ export default class App extends Component {
                 <div style={{paddingTop: this.state.navBarHeight + window.innerHeight * 0.02}}>
                     <Routing />
                 </div>
-                <Footer />
             </div>
         );
     }
