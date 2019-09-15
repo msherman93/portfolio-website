@@ -29,7 +29,7 @@ export default class Dominic extends Component {
                 <div style={boxWrapper}>
                     <div style={styles.textWrapper}>
                         <p style={textStyles.playfairMedium}>{'Dominic'}</p>
-                        <p style={styles.subHeader}>{'Full-stack software developer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
+                        <p style={styles.subHeader}>{'Full-stack software engineer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
                     </div>
                     <img
                         alt={''}

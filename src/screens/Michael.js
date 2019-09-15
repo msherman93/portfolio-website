@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import michael from '../assets/MichaelImage.png';
+import michael from '../assets/MichaelImage.jpg';
 
 const styles = {
     image: {
@@ -29,7 +29,7 @@ export default class Michael extends Component {
                 <div style={boxWrapper}>
                     <div style={styles.textWrapper}>
                         <p style={textStyles.playfairMedium}>{'Michael'}</p>
-                        <p style={styles.subHeader}>{'UX/UI Designer and Illustrator. Designs graphic user interface elements, as well as branding and original images.'}</p>
+                        <p style={styles.subHeader}>{'UI/UX Designer and Illustrator. Designs graphic user interface elements, as well as branding and original images.'}</p>
                     </div>
                     <img
                         alt={''}

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import {NavLink} from 'react-router-dom';
 
 import {black, lightGrey, white} from '../styles/colors';
 import {CONTACT_US, DOMINIC, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
@@ -8,9 +9,9 @@ import {textStyles} from '../styles/text-styles';
 import NavBarLink from './NavBarLink';
 
 const styles = {
-    logo: {
-        height: 'auto',
-        width: '20%'
+    brand: {
+        ...textStyles.playfairSmall,
+        textDecoration: 'none'
     },
     textWrapper: {
         color: black,
@@ -42,17 +43,17 @@ export default class NavBar extends Component {
                 variant={'light'}
             >
                 <Navbar.Brand
-                    as={'p'}
-                    style={textStyles.playfairSmall}
+                    as={'div'}
                 >
-                    <p>{'Sherman Bros.'}</p>
+                    <NavLink
+                        style={styles.brand}
+                        to={HOME}
+                    >
+                        {'Sherman Bros.'}
+                    </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse style={styles.textWrapper}>
-                    <NavBarLink
-                        path={HOME}
-                        text={'Home'}
-                    />
                     <NavBarLink
                         path={PORTFOLIO}
                         text={'Portfolio'}

@@ -1,4 +1,7 @@
+import {black} from './colors';
+
 const playfair = {
+    color: black,
     fontFamily: 'Playfair Display',
     fontWeight: '700'
 };
