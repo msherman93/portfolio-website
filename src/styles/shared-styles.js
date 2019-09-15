@@ -15,7 +15,7 @@ export const centeredColumn = {
     flexDirection: 'column'
 };
 
-export const boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)';
+export const boxShadow = '0px 3px 6px #00000029';
 
 export const boxWrapper = {
     ...centeredColumn,
@@ -23,8 +23,13 @@ export const boxWrapper = {
     borderColor: darkGrey,
     borderWidth: 1,
     justifyContent: 'center',
+    padding: '5%'
+};
+
+export const cardWrapper = {
+    ...boxWrapper,
+    borderRadius: 10,
+    boxShadow,
     margin: '2%',
-    maxWidth: 1100,
-    padding: '5%',
-    width: '93%'
+    padding: '2%'
 };

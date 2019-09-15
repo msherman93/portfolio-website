@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import {textStyles} from '../styles/text-styles';
-import {boxWrapper, centeredRow} from '../styles/shared-styles';
+import {boxShadow, boxWrapper, cardWrapper, centeredRow} from '../styles/shared-styles';
 import github from '../assets/github.svg';
 import link from '../assets/link.png';
 import appstore from '../assets/appstore.png';
@@ -29,13 +29,9 @@ const styles = {
         marginBottom: '10%'
     },
     subText: {
-        ...textStyles.blueBodyText,
         paddingTop: '5%'
     },
-    wrapper: {
-        ...boxWrapper,
-        padding: '2%'
-    }
+    wrapper: cardWrapper
 };
 
 export default class Project extends Component {
@@ -58,7 +54,7 @@ export default class Project extends Component {
                     }}
                 />
                 <div>
-                    <p style={textStyles.blueHeaderText}>{project.name}</p>
+                    <p style={textStyles.playfairMedium}>{project.name}</p>
                 </div>
                 <p style={styles.subText}>{project.subText}</p>
                 <Row style={styles.iconWrapper}>
@@ -68,6 +64,7 @@ export default class Project extends Component {
                         target={'_blank'}
                     >
                         <img
+                            alt={''}
                             src={github}
                             style={styles.icon}
                         />

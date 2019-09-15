@@ -911,7 +911,7 @@
     "@google-cloud/storage" "^1.7.0"
     adm-zip "^0.4.11"
     ajv "^6.5.2"
-    body-parser "^1.18.3"
+    subHeader-parser "^1.18.3"
     cli-table2 "0.2.0"
     colors "1.1.2"
     configstore "^3.1.2"
@@ -2472,7 +2472,7 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
 
 body-parser@1.18.3, body-parser@^1.18.3:
   version "1.18.3"
-  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
+  resolved "https://registry.yarnpkg.com/subHeader-parser/-/subHeader-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
   integrity sha1-WykhmP/dVTs6DyDe0FkrlWlVyLQ=
   dependencies:
     bytes "3.0.0"
@@ -2483,7 +2483,7 @@ body-parser@1.18.3, body-parser@^1.18.3:
     iconv-lite "0.4.23"
     on-finished "~2.3.0"
     qs "6.5.2"
-    raw-body "2.3.3"
+    raw-subHeader "2.3.3"
     type-is "~1.6.16"
 
 bonjour@^3.5.0:
@@ -4939,7 +4939,7 @@ express@^4.16.2, express@^4.16.3:
   dependencies:
     accepts "~1.3.5"
     array-flatten "1.1.1"
-    body-parser "1.18.3"
+    subHeader-parser "1.18.3"
     content-disposition "0.5.2"
     content-type "~1.0.4"
     cookie "0.3.1"
@@ -10542,7 +10542,7 @@ range-parser@^1.0.3, range-parser@~1.2.0:
 
 raw-body@2.3.3:
   version "2.3.3"
-  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.3.3.tgz#1b324ece6b5706e153855bc1148c65bb7f6ea0c3"
+  resolved "https://registry.yarnpkg.com/raw-subHeader/-/raw-subHeader-2.3.3.tgz#1b324ece6b5706e153855bc1148c65bb7f6ea0c3"
   integrity sha512-9esiElv1BrZoI3rCDuOuKCBRbuApGGaDPQfjSflGxdy4oyzqghxu6klEkkVIvBje+FF0BX9coEv8KqW6X/7njw==
   dependencies:
     bytes "3.0.0"

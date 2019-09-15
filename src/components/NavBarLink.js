@@ -3,12 +3,19 @@ import {NavLink} from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 
 import styles from '../css/NavBarLink.module.css';
-import {textStyles} from '../styles/text-styles';
+
+const navText = {
+    fontSize: 16,
+    fontWeight: '900'
+};
 
 export default class NavBarLink extends Component {
     _chooseStyles = () => window.location.pathname === this.props.path ?
-        textStyles.selectedNavBarText :
-        textStyles.navBarText;
+        navText :
+        {
+            ...navText,
+            opacity: 0.6
+        };
 
     render() {
         const {text, path} = this.props;

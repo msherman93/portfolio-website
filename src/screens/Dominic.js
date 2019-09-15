@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import {boxShadow, boxWrapper} from '../styles/shared-styles';
+import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import dominic from '../assets/Dominic.jpg';
+import dominic from '../assets/DominicImage.jpg';
 
 const styles = {
     image: {
@@ -11,23 +11,26 @@ const styles = {
         height: 'auto',
         marginTop: '5%',
         width: '40%'
+    },
+    subHeader: {
+        ...textStyles.subHeader,
+        paddingTop: 16
+    },
+    textWrapper: {
+        ...centeredColumn,
+        width: '40%'
     }
 };
 
 export default class Dominic extends Component {
     render() {
-        console.log('rendered');
-
         return (
-            <div
-                style={{
-                    height: window.innerHeight,
-                    paddingBottom: window.innerHeight * 0.6
-                }}
-            >
+            <div>
                 <div style={boxWrapper}>
-                    <h2>{'Dominic'}</h2>
-                    <p style={textStyles.blueBodyText}>{'Full-stack software developer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
+                    <div style={styles.textWrapper}>
+                        <p style={textStyles.playfairMedium}>{'Dominic'}</p>
+                        <p style={styles.subHeader}>{'Full-stack software developer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
+                    </div>
                     <img
                         alt={''}
                         src={dominic}
@@ -35,9 +38,6 @@ export default class Dominic extends Component {
                     />
                 </div>
                 <div
-                    onLoad={() => {
-                        console.log('here');
-                    }}
                     style={boxWrapper}
                 >
                     <embed

@@ -1,24 +1,13 @@
 import React, {Component} from 'react';
 import Container from 'react-bootstrap/Container';
 
-import homePicture from '../assets/HomePicture.jpg';
-import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
+import {boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import {loremIpsum} from '../constants/text';
 
 const styles = {
-    bodyText: {
-        ...textStyles.blueBodyText,
-        paddingBottom: 40
-    },
-    headerText: {
-        paddingBottom: 25,
-        textAlign: 'center'
-    },
-    image: {
-        boxShadow,
-        height: 'auto',
-        width: '75%'
+    wrapper: {
+        ...boxWrapper,
+        width: '100vw'
     }
 };
 
@@ -29,16 +18,11 @@ export default class Home extends Component {
                 fluid
                 style={centeredColumn}
             >
-                <div style={boxWrapper}>
-                    <h2 style={styles.headerText}>{'Sherman Brothers Web & Mobile Development'}</h2>
-                    <p style={styles.bodyText}>{'“Your business is unique, your website should be too."'}</p>
-                    <p style={styles.bodyText}>{loremIpsum}</p>
+                <div style={styles.wrapper}>
+                    <p style={textStyles.playfairLarge}>{'Sherman Bros.'}</p>
+                    <p style={textStyles.playfairMedium}>{'Web & Mobile Development'}</p>
+                    <p style={textStyles.subHeader}>{'“Your business is unique, your website should be too."'}</p>
                 </div>
-                <img
-                    alt={''}
-                    src={homePicture}
-                    style={styles.image}
-                />
             </Container>
         );
     }

@@ -1,21 +1,22 @@
-import {blue, white} from './colors';
+const playfair = {
+    fontFamily: 'Playfair Display',
+    fontWeight: '700'
+};
 
 export const textStyles = {
-    blueBodyText: {
-        color: blue,
-        fontSize: 16
+    playfairLarge: {
+        ...playfair,
+        fontSize: 50
     },
-    blueHeaderText: {
-        color: blue,
+    playfairMedium: {
+        ...playfair,
+        fontSize: 30
+    },
+    playfairSmall: {
+        ...playfair,
         fontSize: 22
     },
-    navBarText: {
-        color: white,
-        fontSize: 16,
-        opacity: 0.7
-    },
-    selectedNavBarText: {
-        color: white,
-        fontSize: 16
+    subHeader: {
+        fontSize: 20
     }
 };

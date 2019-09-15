@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 
-import {blue, lightGrey, white} from '../styles/colors';
+import {black, lightGrey, white} from '../styles/colors';
+import {CONTACT_US, DOMINIC, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
+import {textStyles} from '../styles/text-styles';
 
 import NavBarLink from './NavBarLink';
-import {CONTACT_US, DOMINIC, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
 
 const styles = {
     logo: {
@@ -12,20 +13,21 @@ const styles = {
         width: '20%'
     },
     textWrapper: {
-        color: white,
+        color: black,
         justifyContent: 'flex-end',
         opacity: 1,
         width: '20%'
     },
     wrapper: {
-        backgroundColor: blue,
+        backgroundColor: white,
         borderColor: lightGrey,
         borderWidth: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         opacity: 1,
-        paddingLeft: '7%',
-        paddingRight: '7%'
+        paddingLeft: '10%',
+        paddingRight: '10%',
+        width: '100%'
     }
 };
 
@@ -35,15 +37,15 @@ export default class NavBar extends Component {
             <Navbar
                 collapseOnSelect
                 expand={'md'}
-                fixed={'top'}
                 id={'navbar'}
                 style={styles.wrapper}
-                variant={'dark'}
+                variant={'light'}
             >
                 <Navbar.Brand
                     as={'p'}
+                    style={textStyles.playfairSmall}
                 >
-                    <p>{'Logo'}</p>
+                    <p>{'Sherman Bros.'}</p>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse style={styles.textWrapper}>
@@ -65,7 +67,7 @@ export default class NavBar extends Component {
                     />
                     <NavBarLink
                         path={CONTACT_US}
-                        text={'Contact Us'}
+                        text={'Contact'}
                     />
                 </Navbar.Collapse>
             </Navbar>
