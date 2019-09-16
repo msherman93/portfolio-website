@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {NavLink} from 'react-router-dom';
 
 import {black, lightGrey, white} from '../styles/colors';
-import {CONTACT_US, DOMINIC, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
+import {CONTACT_US, DOMINIC, GABRIEL, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
 import {textStyles} from '../styles/text-styles';
 
 import NavBarLink from './NavBarLink';
@@ -65,6 +65,10 @@ export default class NavBar extends Component {
                     <NavBarLink
                         path={MICHAEL}
                         text={'Michael'}
+                    />
+                    <NavBarLink
+                        path={GABRIEL}
+                        text={'Gabriel'}
                     />
                     <NavBarLink
                         path={CONTACT_US}

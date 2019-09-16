@@ -9,6 +9,7 @@ import Dominic from '../assets/Dominic.png';
 import Michael from '../assets/Michael.png';
 import Gabe from '../assets/Gabe.png';
 import HomeCard from '../components/HomeCard';
+import {DOMINIC, GABRIEL, MICHAEL} from '../constants/routes';
 
 const IMAGE_HEIGHT = 375;
 
@@ -54,17 +55,20 @@ export default class Home extends Component {
                 <Row style={styles.cardsRow}>
                     <HomeCard
                         image={Michael}
+                        route={MICHAEL}
                         subText={'UI/UX Designer and Illustrator. Designs graphic user interface elements, as well as branding and original images.'}
                         title={'Michael'}
                     />
                     <HomeCard
                         image={Dominic}
+                        route={DOMINIC}
                         subText={'Full-stack software engineer, with primary experience in JavaScript, React, React-Native, and GraphQL'}
                         title={'Dominic'}
                     />
                     <HomeCard
                         image={Gabe}
-                        subText={'Full-stack software engineer, with primary experience in JavaScript, React, React-Native, and GraphQL'}
+                        route={GABRIEL}
+                        subText={'College student who likes programming'}
                         title={'Gabriel'}
                     />
                 </Row>

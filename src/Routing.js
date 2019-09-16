@@ -6,7 +6,8 @@ import Portfolio from './screens/Portfolio';
 import Dominic from './screens/Dominic';
 import Michael from './screens/Michael';
 import ContactUs from './screens/ContactUs';
-import {CONTACT_US, DOMINIC, HOME, MICHAEL, PORTFOLIO} from './constants/routes';
+import {CONTACT_US, DOMINIC, GABRIEL, HOME, MICHAEL, PORTFOLIO} from './constants/routes';
+import Gabriel from './screens/Gabriel';
 
 export default class Routing extends Component {
     render() {
@@ -31,6 +32,11 @@ export default class Routing extends Component {
                     component={Michael}
                     exact
                     path={MICHAEL}
+                />
+                <Route
+                    component={Gabriel}
+                    exact
+                    path={GABRIEL}
                 />
                 <Route
                     component={ContactUs}
