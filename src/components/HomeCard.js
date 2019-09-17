@@ -26,8 +26,9 @@ export default class HomeCard extends Component {
             <Col
                 lg={'3'}
                 md={'5'}
-                xs={'12'}
+                sm={'9'}
                 style={{margin: 16}}
+                xs={'12'}
             >
                 <Link
                     style={styles.wrapper}
