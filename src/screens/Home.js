@@ -15,7 +15,8 @@ const IMAGE_HEIGHT = 375;
 
 const styles = {
     cardsRow: {
-        justifyContent: 'space-evenly',
+        height: '100%',
+        justifyContent: 'center',
         marginBottom: 32,
         marginTop: IMAGE_HEIGHT / 2 - 16,
         width: '100%'
