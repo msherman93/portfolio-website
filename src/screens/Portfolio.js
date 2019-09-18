@@ -2,13 +2,15 @@
 /* eslint-disable react/no-array-index-key */
 import React, {Component} from 'react';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import {projects} from '../constants/projects';
 import Project from '../components/Project';
 
 const styles = {
     wrapper: {
+        margin: 0,
+        padding: 0,
         width: '100%'
     }
 };
@@ -18,18 +20,20 @@ export default class Portfolio extends Component {
         return (
             <Container
                 fluid
+                noGutters
                 style={styles.wrapper}
             >
-                <Row>
+                <Col>
                     {
                         projects.map((project, index) =>
                             <Project
-                                key={index}
+                                index={index}
+                                key={project.name}
                                 project={project}
                             />
                         )
                     }
-                </Row>
+                </Col>
             </Container>
         );
     }
