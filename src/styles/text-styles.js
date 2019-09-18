@@ -19,6 +19,10 @@ export const textStyles = {
         ...playfair,
         fontSize: 22
     },
+    playfairTitle: {
+        ...playfair,
+        fontSize: 75
+    },
     subHeader: {
         fontSize: 20
     }

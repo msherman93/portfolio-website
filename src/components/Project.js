@@ -70,7 +70,7 @@ export default class Project extends Component {
                     lg={'8'}
                     style={{width: '70%'}}
                 >
-                    <p style={textStyles.playfairLarge}>{project.name}</p>
+                    <p style={textStyles.playfairTitle}>{project.name}</p>
                     <p style={styles.subText}>{project.subText}</p>
                     <Row
                         style={styles.iconWrapper}
