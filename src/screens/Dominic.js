@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import dominic from '../assets/DominicImage.jpg';
+import dominic from '../assets/pictures/DominicImage.jpg';
 
 const styles = {
     image: {

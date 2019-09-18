@@ -4,10 +4,10 @@ import Row from 'react-bootstrap/Row';
 
 import {textStyles} from '../styles/text-styles';
 import {boxShadow, boxWrapper, cardWrapper, centeredRow} from '../styles/shared-styles';
-import github from '../assets/github.svg';
-import link from '../assets/link.png';
-import appstore from '../assets/appstore.png';
-import playstore from '../assets/playstore.png';
+import github from '../assets/icons/github.svg';
+import link from '../assets/icons/link.png';
+import appstore from '../assets/icons/appstore.png';
+import playstore from '../assets/icons/playstore.png';
 
 const styles = {
     icon: {

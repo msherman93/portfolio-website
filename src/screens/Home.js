@@ -4,10 +4,10 @@ import Row from 'react-bootstrap/Row';
 
 import {boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import hero from '../assets/hero.png';
-import Dominic from '../assets/Dominic.png';
-import Michael from '../assets/Michael.png';
-import Gabe from '../assets/Gabe.png';
+import hero from '../assets/characters/hero.png';
+import Dominic from '../assets/characters/Dominic.png';
+import Michael from '../assets/characters/Michael.png';
+import Gabe from '../assets/characters/Gabe.png';
 import HomeCard from '../components/HomeCard';
 import {DOMINIC, GABRIEL, MICHAEL} from '../constants/routes';
 

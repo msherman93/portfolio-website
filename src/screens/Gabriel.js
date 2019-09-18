@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
 import {textStyles} from '../styles/text-styles';
-import gabriel from '../assets/GabrielImage.JPG';
+import gabriel from '../assets/pictures/GabrielImage.JPG';
 
 const styles = {
     image: {
