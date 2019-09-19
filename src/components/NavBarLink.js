@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
+import {Link} from 'react-router-dom';
 
 import styles from '../css/NavBarLink.module.css';
 
@@ -21,7 +21,7 @@ export default class NavBarLink extends Component {
         const {text, path} = this.props;
 
         return (
-            <NavLink
+            <Link
                 className={styles.navLinkWrapper}
                 style={{textDecoration: 'none'}}
                 to={path}
@@ -33,7 +33,7 @@ export default class NavBarLink extends Component {
                 >
                     {text}
                 </Nav.Link>
-            </NavLink>
+            </Link>
         );
     }
 }

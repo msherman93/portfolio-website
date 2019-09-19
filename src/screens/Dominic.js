@@ -25,28 +25,16 @@ const styles = {
 export default class Dominic extends Component {
     render() {
         return (
-            <div>
-                <div style={boxWrapper}>
-                    <div style={styles.textWrapper}>
-                        <p style={textStyles.playfairMedium}>{'Dominic'}</p>
-                        <p style={styles.subHeader}>{'Full-stack software engineer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
-                    </div>
-                    <img
-                        alt={''}
-                        src={dominic}
-                        style={styles.image}
-                    />
+            <div style={boxWrapper}>
+                <div style={styles.textWrapper}>
+                    <p style={textStyles.playfairMedium}>{'Dominic'}</p>
+                    <p style={styles.subHeader}>{'Full-stack software engineer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
                 </div>
-                <div
-                    style={boxWrapper}
-                >
-                    <embed
-                        allowFullScreen
-                        height={window.innerHeight * 0.6}
-                        src={'/ShermanResume.pdf'}
-                        width={window.innerWidth * 0.5}
-                    />
-                </div>
+                <img
+                    alt={''}
+                    src={dominic}
+                    style={styles.image}
+                />
             </div>
         );
     }

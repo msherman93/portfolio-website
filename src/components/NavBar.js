@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import {NavLink} from 'react-router-dom';
 
 import {black, lightGrey, white} from '../styles/colors';
 import {CONTACT_US, DOMINIC, GABRIEL, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
 import {textStyles} from '../styles/text-styles';
 
 import NavBarLink from './NavBarLink';
+import {Link} from 'react-router-dom';
 
 const styles = {
     brand: {
@@ -45,12 +45,12 @@ export default class NavBar extends Component {
                 <Navbar.Brand
                     as={'div'}
                 >
-                    <NavLink
+                    <Link
                         style={styles.brand}
                         to={HOME}
                     >
                         {'Sherman Bros.'}
-                    </NavLink>
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse style={styles.textWrapper}>
