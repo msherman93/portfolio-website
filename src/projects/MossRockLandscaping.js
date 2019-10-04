@@ -13,7 +13,9 @@ const styles = {
         paddingTop: 16
     },
     image: {
+        bottom: 0,
         minHeight: '100%',
+        position: 'absolute',
         width: '100%'
     },
     imageWrapper: {
@@ -21,7 +23,7 @@ const styles = {
         overflow: 'hidden',
         position: 'absolute',
         width: '100vw',
-        zIndex: -1
+        zIndex: -5
     },
     textWrapper: {
         padding: '2%',
@@ -70,15 +72,20 @@ const MossRockLandscaping = () => (
                 <p style={styles.body}>{projects[MOSS_ROCK].subText}</p>
             </Col>
             <Col
-                style={{width: '50%'}}
-                {...colProps}
+                style={{
+                    height: '100vw',
+                    overflow: 'hidden',
+                    width: '50%'
+                }}
             >
                 <img
                     alt={''}
                     src={require('../assets/projects/mossrock1.png')}
                     style={{
                         boxShadow,
-                        width: '35%'
+                        left: '10vw',
+                        position: 'absolute',
+                        width: '50%'
                     }}
                 />
                 <img
@@ -86,7 +93,11 @@ const MossRockLandscaping = () => (
                     src={require('../assets/projects/mossrock2.png')}
                     style={{
                         boxShadow,
-                        width: '35%'
+                        left: '18vw',
+                        position: 'absolute',
+                        top: '3vw',
+                        width: '50%',
+                        zIndex: '-1'
                     }}
                 />
             </Col>
