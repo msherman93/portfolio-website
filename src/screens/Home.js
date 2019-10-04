@@ -3,13 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import {boxWrapper, centeredColumn} from '../styles/shared-styles';
-import {textStyles} from '../styles/text-styles';
 import hero from '../assets/characters/hero.png';
 import Dominic from '../assets/characters/Dominic.png';
 import Michael from '../assets/characters/Michael.png';
 import Gabe from '../assets/characters/Gabe.png';
 import HomeCard from '../components/HomeCard';
 import {DOMINIC, GABRIEL, MICHAEL} from '../constants/routes';
+import {playfairStyles, robotoStyles} from '../styles/text-styles';
 
 const IMAGE_HEIGHT = 375;
 
@@ -44,9 +44,9 @@ export default class Home extends Component {
                 style={centeredColumn}
             >
                 <div style={styles.wrapper}>
-                    <p style={textStyles.playfairLarge}>{'Sherman Bros.'}</p>
-                    <p style={textStyles.playfairMedium}>{'Web & Mobile Development'}</p>
-                    <p style={textStyles.subHeader}>{'“Your business is unique, your website should be too."'}</p>
+                    <p style={playfairStyles.large}>{'Sherman Bros.'}</p>
+                    <p style={playfairStyles.medium}>{'Web & Mobile Development'}</p>
+                    <p style={robotoStyles.medium}>{'“Your business is unique, your website should be too."'}</p>
                     <img
                         alt={''}
                         src={hero}

@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import {Link} from 'react-router-dom';
 
 import {black, lightGrey, white} from '../styles/colors';
 import {CONTACT_US, DOMINIC, GABRIEL, HOME, MICHAEL, PORTFOLIO} from '../constants/routes';
-import {textStyles} from '../styles/text-styles';
+import {playfairStyles} from '../styles/text-styles';
 
 import NavBarLink from './NavBarLink';
-import {Link} from 'react-router-dom';
 
 const styles = {
     brand: {
-        ...textStyles.playfairSmall,
+        ...playfairStyles.small,
         textDecoration: 'none'
     },
     textWrapper: {

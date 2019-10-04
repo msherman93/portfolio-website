@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
-import {textStyles} from '../styles/text-styles';
-import gabriel from '../assets/pictures/GabrielImage.JPG';
+import gabriel from '../assets/headshots/gabe.jpg';
+import {playfairStyles, robotoStyles} from '../styles/text-styles';
 
 const styles = {
     image: {
@@ -13,7 +13,7 @@ const styles = {
         width: '40%'
     },
     subHeader: {
-        ...textStyles.subHeader,
+        ...robotoStyles.medium,
         paddingTop: 16
     },
     textWrapper: {
@@ -27,7 +27,7 @@ export default class Gabriel extends Component {
         return (
             <div style={boxWrapper}>
                 <div style={styles.textWrapper}>
-                    <p style={textStyles.playfairMedium}>{'Gabriel'}</p>
+                    <p style={playfairStyles.medium}>{'Gabriel'}</p>
                     <p style={styles.subHeader}>{'College student who likes programming'}</p>
                 </div>
                 <img

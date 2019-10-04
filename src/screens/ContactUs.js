@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Button, Col, Container, Form, Row} from 'react-bootstrap';
 
 import {boxWrapper, centeredColumn, centeredRow} from '../styles/shared-styles';
-import {textStyles} from '../styles/text-styles';
+import {playfairStyles} from '../styles/text-styles';
 
 const styles = {
     button: {
@@ -49,7 +49,7 @@ export default class ContactUs extends Component {
                     width: '100vw'
                 }}
             >
-                <p style={textStyles.playfairMedium}>{'Contact Us'}</p>
+                <p style={playfairStyles.medium}>{'Contact Us'}</p>
                 <p style={{paddingTop: 16}}>{'If you have a need for a web or mobile application, small or large, contact us below!'}</p>
                 <Form style={{paddingTop: 16}}>
                     <Row>

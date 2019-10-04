@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Col from 'react-bootstrap/Col';
 
-import {textStyles} from '../styles/text-styles';
 import {cardWrapper} from '../styles/shared-styles';
+import {playfairStyles} from '../styles/text-styles';
 
 const styles = {
     image: {
@@ -39,7 +39,7 @@ export default class HomeCard extends Component {
                         src={image}
                         style={styles.image}
                     />
-                    <p style={textStyles.playfairMedium}>{title}</p>
+                    <p style={playfairStyles.medium}>{title}</p>
                     <p style={{paddingTop: 16}}>{subText}</p>
                 </Link>
             </Col>

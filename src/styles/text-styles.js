@@ -1,4 +1,4 @@
-import {black} from './colors';
+import {black, white} from './colors';
 
 const playfair = {
     color: black,
@@ -6,24 +6,44 @@ const playfair = {
     fontWeight: '700'
 };
 
-export const textStyles = {
-    playfairLarge: {
+export const playfairStyles = {
+    large: {
         ...playfair,
         fontSize: 50
     },
-    playfairMedium: {
+    medium: {
         ...playfair,
         fontSize: 30
     },
-    playfairSmall: {
+    small: {
         ...playfair,
         fontSize: 22
     },
-    playfairTitle: {
+    title: {
         ...playfair,
         fontSize: 75
+    }
+};
+
+export const robotoStyles = {
+    largeWhite: {
+        color: white,
+        fontFamily: 'Roboto',
+        fontSize: 35
     },
-    subHeader: {
+    medium: {
+        fontFamily: 'Roboto',
         fontSize: 20
+    },
+    mediumWhite: {
+        color: white,
+        fontFamily: 'Roboto',
+        fontSize: 20
+    },
+    titleWhite: {
+        color: white,
+        fontFamily: 'Roboto',
+        fontSize: 50,
+        fontWeight: '700'
     }
 };

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
-import {textStyles} from '../styles/text-styles';
-import dominic from '../assets/pictures/DominicImage.jpg';
+import dominic from '../assets/headshots/dominic.jpg';
+import {playfairStyles, robotoStyles} from '../styles/text-styles';
 
 const styles = {
     image: {
@@ -13,7 +13,7 @@ const styles = {
         width: '40%'
     },
     subHeader: {
-        ...textStyles.subHeader,
+        ...robotoStyles.medium,
         paddingTop: 16
     },
     textWrapper: {
@@ -27,7 +27,7 @@ export default class Dominic extends Component {
         return (
             <div style={boxWrapper}>
                 <div style={styles.textWrapper}>
-                    <p style={textStyles.playfairMedium}>{'Dominic'}</p>
+                    <p style={playfairStyles.medium}>{'Dominic'}</p>
                     <p style={styles.subHeader}>{'Full-stack software engineer, with primary experience in JavaScript, React, React-Native, and GraphQL'}</p>
                 </div>
                 <img

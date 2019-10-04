@@ -5,10 +5,16 @@ body, div, p {
 
 body {
     background-color: #F8F8F8;
-    font-family: Roboto;
 }
 
 p {
     text-decoration: none;
     color: black;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../assets/fonts/AvenirLight.otf');
 }

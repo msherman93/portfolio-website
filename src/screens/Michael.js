@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import {boxShadow, boxWrapper, centeredColumn} from '../styles/shared-styles';
-import {textStyles} from '../styles/text-styles';
-import michael from '../assets/pictures/MichaelImage.jpg';
+import michael from '../assets/headshots/michael.jpg';
+import {playfairStyles, robotoStyles} from '../styles/text-styles';
 
 const styles = {
     image: {
@@ -13,7 +13,7 @@ const styles = {
         width: '40%'
     },
     subHeader: {
-        ...textStyles.subHeader,
+        ...robotoStyles.medium,
         paddingTop: 16
     },
     textWrapper: {
@@ -28,7 +28,7 @@ export default class Michael extends Component {
             <div style={{height: window.innerHeight}}>
                 <div style={boxWrapper}>
                     <div style={styles.textWrapper}>
-                        <p style={textStyles.playfairMedium}>{'Michael'}</p>
+                        <p style={playfairStyles.medium}>{'Michael'}</p>
                         <p style={styles.subHeader}>{'UI/UX Designer and Illustrator. Designs graphic user interface elements, as well as branding and original images.'}</p>
                     </div>
                     <img
