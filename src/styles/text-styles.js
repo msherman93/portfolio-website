@@ -26,6 +26,10 @@ export const playfairStyles = {
 };
 
 export const robotoStyles = {
+    large: {
+        fontFamily: 'Roboto',
+        fontSize: 35
+    },
     largeWhite: {
         color: white,
         fontFamily: 'Roboto',
@@ -39,6 +43,11 @@ export const robotoStyles = {
         color: white,
         fontFamily: 'Roboto',
         fontSize: 20
+    },
+    title: {
+        fontFamily: 'Roboto',
+        fontSize: 50,
+        fontWeight: '700'
     },
     titleWhite: {
         color: white,

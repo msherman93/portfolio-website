@@ -1,11 +1,8 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import {robotoStyles} from '../styles/text-styles';
-import {boxShadow, centeredRow} from '../styles/shared-styles';
-import {MOSS_ROCK, projects, SPADES} from '../constants/projects';
+import {centeredRow} from '../styles/shared-styles';
+import {projects, SPADES} from '../constants/projects';
 
 const styles = {
     background: {
@@ -22,8 +19,7 @@ const styles = {
         height: '100vh',
         overflow: 'hidden',
         position: 'absolute',
-        width: '100vw',
-        zIndex: -5
+        width: '100vw'
     },
     leftImage: {
         left: -200,
@@ -33,7 +29,7 @@ const styles = {
         zIndex: -1
     },
     logo: {
-        width: '20%'
+        width: '75%'
     },
     rightImage: {
         bottom: -100,
@@ -78,28 +74,62 @@ const Spades = () => (
                 style={{
                     ...centeredRow,
                     bottom: 75,
+                    justifyContent: 'space-evenly',
                     left: 0,
                     position: 'absolute',
-                    justifyContent: 'space-evenly',
                     width: '40%'
                 }}
             >
-                <img
-                    alt={''}
-                    src={require('../assets/icons/github.png')}
-                    style={styles.logo}
-                />
-                <img
-                    alt={''}
-                    src={require('../assets/icons/app-store.png')}
-                    style={styles.logo}
-                />
-                <img
-                    alt={''}
-                    src={require('../assets/icons/google-play.png')}
-                    style={styles.logo}
-                />
+                <a
+                    href={projects[SPADES].github}
+                    style={{
+                        ...centeredRow
+                    }}
+                    target={'_blank'}
+                >
+                    <img
+                        alt={''}
+                        src={require('../assets/icons/github.png')}
+                        style={styles.logo}
+                    />
+                </a>
+                <a
+                    href={projects[SPADES].appStoreLink}
+                    style={{
+                        ...centeredRow
+                    }}
+                    target={'_blank'}
+                >
+                    <img
+                        alt={''}
+                        src={require('../assets/icons/app-store.png')}
+                        style={styles.logo}
+                    />
+                </a>
+                <a
+                    href={projects[SPADES].playStoreLink}
+                    style={{
+                        ...centeredRow
+                    }}
+                    target={'_blank'}
+                >
+                    <img
+                        alt={''}
+                        src={require('../assets/icons/google-play.png')}
+                        style={styles.logo}
+                    />
+                </a>
             </div>
+            <img
+                alt={''}
+                src={require('../assets/projects/phones.png')}
+                style={{
+                    bottom: '8vw',
+                    position: 'absolute',
+                    right: '12vw',
+                    width: '40%'
+                }}
+            />
         </div>
         <div
             style={styles.wrapper}
@@ -110,23 +140,6 @@ const Spades = () => (
                 <p style={robotoStyles.titleWhite}>{'SPADES SCORE'}</p>
                 <p style={robotoStyles.largeWhite}>{'Mobile App for iOS and Android'}</p>
                 <p style={styles.body}>{projects[SPADES].subText}</p>
-            </div>
-            <div
-                style={{
-                    overflow: 'hidden',
-                    width: '50%'
-                }}
-            >
-                <img
-                    alt={''}
-                    src={require('../assets/projects/phones.png')}
-                    style={{
-                        bottom: 100,
-                        position: 'absolute',
-                        right: '20vw',
-                        width: '35%'
-                    }}
-                />
             </div>
         </div>
     </div>
