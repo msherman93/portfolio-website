@@ -1,12 +1,16 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import {robotoStyles} from '../styles/text-styles';
 import {boxShadow} from '../styles/shared-styles';
 import {MOSS_ROCK, projects} from '../constants/projects';
 import css from '../css/MossRock.module.css';
+
+const previewImages = {
+    boxShadow,
+    minWidth: 275,
+    position: 'absolute',
+    width: '48%'
+};
 
 const styles = {
     body: {
@@ -26,32 +30,38 @@ const styles = {
         width: '100vw',
         zIndex: -5
     },
-    textWrapper: {
-        padding: '2%',
+    leftImage: {
+        ...previewImages,
+        right: '15vw',
+        top: 30
+    },
+    previewWrapper: {
+        height: '100vw',
+        overflow: 'hidden',
+        position: 'absolute',
+        right: 0,
         width: '50%'
+    },
+    rightImage: {
+        ...previewImages,
+        right: '7vw',
+        top: 50,
+        zIndex: -1
+    },
+    textWrapper: {
+        padding: '2%'
     },
     wrapper: {
         display: 'flex',
         flexDirection: 'row',
+        justifyContent: 'space-between',
         padding: '5%',
         width: '100%'
     }
 };
 
-const colProps = {
-    lg: 6,
-    md: 12,
-    sm: 12,
-    xs: 12
-};
-
 const MossRockLandscaping = () => (
-    <Container
-        fluid
-        style={{
-            padding: 0
-        }}
-    >
+    <div>
         <div
             style={styles.imageWrapper}
         >
@@ -61,50 +71,34 @@ const MossRockLandscaping = () => (
                 style={styles.image}
             />
         </div>
-        <Row
+        <div
             style={styles.wrapper}
         >
-            <Col
+            <div
+                className={css.textWrapper}
                 style={styles.textWrapper}
-                {...colProps}
             >
                 <p style={robotoStyles.titleWhite}>{'MOSS ROCK LANDSCAPING'}</p>
                 <p style={robotoStyles.largeWhite}>{'Premier Landscape Design Firm'}</p>
                 <p style={styles.body}>{projects[MOSS_ROCK].subText}</p>
-            </Col>
-            <Col
-                className={css.imageWrapper}
-                style={{
-                    height: '100vw',
-                    overflow: 'hidden',
-                    width: '50%'
-                }}
+            </div>
+            <div
+                className={css.previewWrapper}
+                style={styles.previewWrapper}
             >
                 <img
                     alt={''}
                     src={require('../assets/projects/mossrock1.png')}
-                    style={{
-                        boxShadow,
-                        left: '10vw',
-                        position: 'absolute',
-                        width: '50%'
-                    }}
+                    style={styles.leftImage}
                 />
                 <img
                     alt={''}
                     src={require('../assets/projects/mossrock2.png')}
-                    style={{
-                        boxShadow,
-                        left: '18vw',
-                        position: 'absolute',
-                        top: '3vw',
-                        width: '50%',
-                        zIndex: -1
-                    }}
+                    style={styles.rightImage}
                 />
-            </Col>
-        </Row>
-    </Container>
+            </div>
+        </div>
+    </div>
 );
 
 export default MossRockLandscaping;

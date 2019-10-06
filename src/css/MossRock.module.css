@@ -1,5 +1,12 @@
-@media (max-width: 991px) {
-    .imageWrapper {
+.textWrapper {
+    width: 50%;
+}
+
+@media (max-width: 825px) {
+    .textWrapper {
+        width: 100%;
+    }
+    .previewWrapper {
         display: none;
     }
 }
