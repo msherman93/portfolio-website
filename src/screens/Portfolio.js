@@ -9,9 +9,9 @@ const Porfolio = () => (
     <ReactPageScroller
         transitionTimingFunction={'ease'}
     >
-        <Wedding />
-        <Spades />
         <MossRockLandscaping />
+        <Spades />
+        <Wedding />
     </ReactPageScroller>
 );
 

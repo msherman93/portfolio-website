@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import {robotoStyles} from '../styles/text-styles';
 import {boxShadow} from '../styles/shared-styles';
 import {MOSS_ROCK, projects} from '../constants/projects';
+import css from '../css/MossRock.module.css';
 
 const styles = {
     body: {
@@ -72,6 +73,7 @@ const MossRockLandscaping = () => (
                 <p style={styles.body}>{projects[MOSS_ROCK].subText}</p>
             </Col>
             <Col
+                className={css.imageWrapper}
                 style={{
                     height: '100vw',
                     overflow: 'hidden',
@@ -97,7 +99,7 @@ const MossRockLandscaping = () => (
                         position: 'absolute',
                         top: '3vw',
                         width: '50%',
-                        zIndex: '-1'
+                        zIndex: -1
                     }}
                 />
             </Col>
