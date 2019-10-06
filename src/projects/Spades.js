@@ -3,17 +3,26 @@ import React from 'react';
 import {robotoStyles} from '../styles/text-styles';
 import {centeredRow} from '../styles/shared-styles';
 import {projects, SPADES} from '../constants/projects';
+import css from '../css/Spades.module.css';
 
 const styles = {
     background: {
         position: 'absolute',
         right: 50,
-        width: '80%',
+        top: 0,
+        width: '100%',
         zIndex: -5
     },
     body: {
         ...robotoStyles.mediumWhite,
         paddingTop: 16
+    },
+    iconsWrapper: {
+        ...centeredRow,
+        bottom: 110,
+        justifyContent: 'space-evenly',
+        left: 0,
+        position: 'absolute'
     },
     imageWrapper: {
         height: '100vh',
@@ -31,15 +40,22 @@ const styles = {
     logo: {
         width: '75%'
     },
+    previewImage: {
+        minWidth: 350,
+        position: 'absolute',
+        right: '12vw',
+        top: '20vh',
+        width: '40%'
+    },
     rightImage: {
         bottom: -100,
         position: 'absolute',
         right: -100,
-        width: 950,
+        width: '65%',
         zIndex: -1
     },
     textWrapper: {
-        marginLeft: '7%',
+        marginLeft: 75,
         marginTop: '2%',
         width: 400
     },
@@ -62,6 +78,7 @@ const Spades = () => (
             />
             <img
                 alt={''}
+                className={css.rightSide}
                 src={require('../assets/projects/right-shape.png')}
                 style={styles.rightImage}
             />
@@ -71,20 +88,12 @@ const Spades = () => (
                 style={styles.background}
             />
             <div
-                style={{
-                    ...centeredRow,
-                    bottom: 75,
-                    justifyContent: 'space-evenly',
-                    left: 0,
-                    position: 'absolute',
-                    width: '40%'
-                }}
+                className={css.iconsWrapper}
+                style={styles.iconsWrapper}
             >
                 <a
                     href={projects[SPADES].github}
-                    style={{
-                        ...centeredRow
-                    }}
+                    style={centeredRow}
                     target={'_blank'}
                 >
                     <img
@@ -95,9 +104,7 @@ const Spades = () => (
                 </a>
                 <a
                     href={projects[SPADES].appStoreLink}
-                    style={{
-                        ...centeredRow
-                    }}
+                    style={centeredRow}
                     target={'_blank'}
                 >
                     <img
@@ -108,9 +115,7 @@ const Spades = () => (
                 </a>
                 <a
                     href={projects[SPADES].playStoreLink}
-                    style={{
-                        ...centeredRow
-                    }}
+                    style={centeredRow}
                     target={'_blank'}
                 >
                     <img
@@ -122,13 +127,9 @@ const Spades = () => (
             </div>
             <img
                 alt={''}
+                className={css.rightSide}
                 src={require('../assets/projects/phones.png')}
-                style={{
-                    bottom: '8vw',
-                    position: 'absolute',
-                    right: '12vw',
-                    width: '40%'
-                }}
+                style={styles.previewImage}
             />
         </div>
         <div

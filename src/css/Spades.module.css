@@ -1,0 +1,12 @@
+.iconsWrapper {
+    width: 40%;
+}
+
+@media (max-width: 925px) {
+    .iconsWrapper {
+        width: 100%;
+    }
+    .rightSide {
+        display: none;
+    }
+}
