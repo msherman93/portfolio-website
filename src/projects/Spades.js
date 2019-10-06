@@ -31,7 +31,7 @@ const styles = {
         width: '100vw'
     },
     leftImage: {
-        left: -200,
+        left: -250,
         position: 'absolute',
         top: -300,
         width: 850,
@@ -55,7 +55,7 @@ const styles = {
         zIndex: -1
     },
     textWrapper: {
-        marginLeft: 75,
+        marginLeft: '5%',
         marginTop: '2%',
         width: 400
     },
@@ -67,7 +67,7 @@ const styles = {
 };
 
 const Spades = () => (
-    <div>
+    <div style={{height: '100vh'}}>
         <div
             style={styles.imageWrapper}
         >

@@ -54,14 +54,13 @@ const styles = {
     wrapper: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
         padding: '5%',
         width: '100%'
     }
 };
 
 const MossRockLandscaping = () => (
-    <div>
+    <div style={{height: '100vh'}}>
         <div
             style={styles.imageWrapper}
         >

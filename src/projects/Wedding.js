@@ -1,17 +1,25 @@
 import React from 'react';
 
 import {robotoStyles} from '../styles/text-styles';
-import {projects, SPADES, WEDDING} from '../constants/projects';
+import {projects, WEDDING} from '../constants/projects';
 import {boxShadow} from '../styles/shared-styles';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import css from '../css/Wedding.module.css';
+
+const previewImages = {
+    boxShadow,
+    minWidth: 275,
+    position: 'absolute',
+    width: '50%'
+};
 
 const styles = {
     background: {
+        minHeight: '100%',
+        minWidth: 400,
+        overflow: 'hidden',
         position: 'absolute',
-        width: '100%',
-        zIndex: -5
+        top: 0,
+        width: '100%'
     },
     body: {
         ...robotoStyles.medium,
@@ -21,45 +29,39 @@ const styles = {
         height: '100vh',
         overflow: 'hidden',
         position: 'absolute',
-        width: '100%',
+        width: '100vw',
         zIndex: -5
     },
     leftImage: {
-        left: -200,
-        position: 'absolute',
-        top: -300,
-        width: 850,
-        zIndex: -1
+        ...previewImages,
+        right: '10vw'
     },
     logo: {
         width: '20%'
     },
-    rightImage: {
-        bottom: -100,
+    previewWrapper: {
         position: 'absolute',
-        right: -100,
-        width: 950,
-        zIndex: -1
+        right: 0
+    },
+    rightImage: {
+        ...previewImages,
+        right: '5vw',
+        top: 50,
+        zIndex: '-1'
     },
     textWrapper: {
-        paddingLeft: '5%',
-        marginTop: '4%',
-        width: '50%'
+        marginTop: '4%'
     },
     wrapper: {
         display: 'flex',
         flexDirection: 'row',
+        padding: '5%',
         width: '100%'
     }
 };
 
 const Wedding = () => (
-    <Container
-        fluid
-        style={{
-            padding: 0
-        }}
-    >
+    <div style={{height: '100vh'}}>
         <div
             style={styles.imageWrapper}
         >
@@ -69,43 +71,34 @@ const Wedding = () => (
                 style={styles.background}
             />
         </div>
-        <Row
+        <div
             style={styles.wrapper}
         >
-            <Col
+            <div
+                className={css.textWrapper}
                 style={styles.textWrapper}
             >
                 <p style={robotoStyles.title}>{'DOMINIC & MARY WEDDING'}</p>
                 <p style={robotoStyles.large}>{'Registry and Information'}</p>
                 <p style={styles.body}>{projects[WEDDING].subText}</p>
-            </Col>
-            <Col style={{width: '50%'}}>
+            </div>
+            <div
+                className={css.previewWrapper}
+                style={styles.previewWrapper}
+            >
                 <img
                     alt={''}
                     src={require('../assets/projects/wedding1.png')}
-                    style={{
-                        boxShadow,
-                        left: '10vw',
-                        position: 'absolute',
-                        top: '5vw',
-                        width: '50%'
-                    }}
+                    style={styles.leftImage}
                 />
                 <img
                     alt={''}
                     src={require('../assets/projects/wedding2.png')}
-                    style={{
-                        boxShadow,
-                        left: '18vw',
-                        position: 'absolute',
-                        top: '8vw',
-                        width: '50%',
-                        zIndex: '-1'
-                    }}
+                    style={styles.rightImage}
                 />
-            </Col>
-        </Row>
-    </Container>
+            </div>
+        </div>
+    </div>
 );
 
 export default Wedding;

@@ -8,5 +8,6 @@
     }
     .rightSide {
         display: none;
+        overflow: hidden;
     }
 }

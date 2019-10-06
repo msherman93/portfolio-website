@@ -1,0 +1,16 @@
+.textWrapper {
+    width: 50%;
+}
+
+.previewWrapper {
+    width: 50%;
+}
+
+@media (max-width: 750px) {
+    .textWrapper {
+        width: 100%;
+    }
+    .previewWrapper {
+        display: none;
+    }
+}
